@@ -2,7 +2,7 @@
 Using a basic graphics library, I wrote a program to recursively draw a modified version of a Pythagoras Tree using random angles.
 
 ---------------------------------------------------
-(image 1)
+![Random Angle Pythagoras Tree](https://github.com/IntoTheVortex/Pythagoras_Tree/blob/main/images/py_tree.png?raw=true)
 
 Fractal Description:
 The Pythagoras Tree is based on the Pythagorean Theorem: a2+b2 = c2. The squares of each side of a right triangle are related in this fashion, and the Pythagoras Tree simply shows these squares attached to their related triangle sides. As the hypotenuse is the largest side, the base square is also the largest square, with each succeeding square decreasing in size according to the theorem. 
@@ -12,11 +12,11 @@ Design Paradigm & Mathematical Description:
 Though the Pythagorean Theorem applies to right triangles, the Pythagorean Tree can be modified using other triangles to create more varied tree-forms. 
 For my implementation, the shape of the triangle is determined at random at each step. A side (line AC) of the root square is passed into a function, which randomly determines how far along the line will be the opposite point of the new triangle (point B):
 
-(image 2)
+![Finding point B](https://github.com/IntoTheVortex/Pythagoras_Tree/blob/main/images/im_2.png?raw=true)
 
 This point delineates the bases of two right triangles, which share point B and help to mathematically determine point D:
 
-(image 3)
+![Finding point D](https://github.com/IntoTheVortex/Pythagoras_Tree/blob/main/images/im_3.png?raw=true)
 
 Point D is determined by finding zx and zy using the random fraction f, and the points (x1,y1) and (x2,y2) from line AC:
 
@@ -42,7 +42,7 @@ yi = y + ((maj_axis+maj_incr) * cos(t) * sin(phi)) + ((min_axis+min_incr) * sin(
 
 The angle t proceeds by a defined radial interval, in this case pi/12.
 
-(image 4)
+![Angle t on the Unit Circle](https://github.com/IntoTheVortex/Pythagoras_Tree/blob/main/images/im_4.png?raw=true)
 
 The graphical representation shows how a circle would be plotted. The ellipse equation achieves the varying radial lengths, instead of a constant radius as shown above. 
 
